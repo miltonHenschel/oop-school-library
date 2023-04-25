@@ -42,9 +42,9 @@ An Object Oriented Programming (OOP) school library with three classes: Person, 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-<summary>
-![](https://img.shields.io/badge/Ruby-CC342D.svg?style=for-the-badge&logo=Ruby&logoColor=white)
-</summary>
+  <summary>Backend</summary>
+  <br />
+  <img src="https://img.shields.io/badge/Ruby-CC342D.svg?style=for-the-badge&logo=Ruby&logoColor=white" alt="ruby" />
 </details>
 
 <!-- Features -->
