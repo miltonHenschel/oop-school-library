@@ -1,3 +1,5 @@
+require './person'
+
 class student < person
   def initialize(classroom)
     super
