@@ -41,28 +41,28 @@ class Main
       list_persons(@person_list)
       choice
     when '3'
-      add_person()
+      add_persons(@person_list)
       choice
     when '4'
-      add_books()
+      add_books(@book_list)
       choice
     when '5'
-      add_rentals()
+      add_rentals(@person_list, @book_list, @rental_list)
       choice
     end
     when '6'
-      list_rentals()
+      list_rentals(@person_list, @rental_list)
       choice
     end
   end
 
-  def display_person(person_choice)
+  def display_persons(person_choice)
     case person_choice
     when '1'
-      add_student()
+      add_students()
       person_choice
     when '2'
-      add_teacher()
+      add_teachers()
       person_choice
     end
   end

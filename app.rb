@@ -31,17 +31,17 @@ class App
     end
   end
 
-  def add_person(person)
+  def add_persons(person)
     puts 'Press 1 to add a student or 2 to add a teacher: /n'
     option = gets.chomp
     if option = '1'
-      add_student(person)
+      add_students(person)
     elsif option = '2'
-      add_teacher(person)
+      add_teachers(person)
     end
   end
 
-  def add_student(person)
+  def add_students(person)
     puts 'Enter name: \n'
     name = gets.chomp
     puts 'Enter age: \n'
@@ -54,7 +54,7 @@ class App
     puts 'You successfully added a student!\n'
   end
 
-  def add_teacher(person)
+  def add_teachers(person)
     puts 'Enter name: \n'
     name = gets.chomp
     puts 'Enter age: \n'
