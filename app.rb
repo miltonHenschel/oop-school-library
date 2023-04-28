@@ -89,7 +89,7 @@ class App
       person_index = gets.chomp.to_i
 
       puts 'Choose a book: \n'
-      books.each{|index, book| puts '#{book.id} - #{book.title} #{person.author}'}
+      books.each{|index, book| puts '#{book.id} - #{book.title}: #{person.author}'}
       puts 'Person index: '
       book_index = gets.chomp.to_i
     end
@@ -115,8 +115,4 @@ class App
       end
     end
   end
-
-app = App.new
-app.list_books
-app.list_persons
 end
