@@ -11,6 +11,6 @@ require './decorator'
 # puts capitalized_trimmed_person.correct_name
 
 # TEST RELATIONSHIP BETWEEN CLASSROOM & STUDENT
-classroom1 = Classroom.new("Class 1")
-student1 = Student.new(1, 30, classroom1, "Henschel")
+classroom1 = Classroom.new('Class 1')
+student1 = Student.new(1, 30, classroom1, 'Henschel')
 puts student1.inspect
