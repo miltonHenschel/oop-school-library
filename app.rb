@@ -2,6 +2,7 @@ class App
   def initialize
     @book_list = []
     @person_list = []
+    @rental_list = []
   end
 
   def list_books(books)
