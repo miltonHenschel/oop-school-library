@@ -18,6 +18,7 @@ class Main
     4 > Add a book
     5 > Add a rental
     6 > List all rentals
+    7 > Exit
     '
     puts 'Please kindly choose a number: \n'
     choice = gets.chomp
@@ -44,6 +45,9 @@ class Main
     when '6'
       list_rentals(@person_list, @rental_list)
       choice
+    end
+    when '7'
+      puts 'Thanks for using this app. Good bye!\n'
     end
   end
 end
