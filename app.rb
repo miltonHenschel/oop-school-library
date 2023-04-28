@@ -6,7 +6,7 @@ class App
 
   def list_books
     if @book_list.length == 0
-      puts "Empty!"
+      puts 'Empty!\n'
     else
       @book_list.each{|index, content| puts '#{index} - #{content}'}
     end
@@ -14,7 +14,7 @@ class App
 
   def list_persons
     if @person_list.length == 0
-      puts "Empty!"
+      puts 'Empty!\n'
     else
       @person_list.each{|index, content| puts '#{index} - #{content}'}
     end
@@ -28,6 +28,32 @@ class App
     elsif option = '2'
       create_teacher(person)
     end
+  end
+
+  def create_student(person)
+    puts 'Enter name: \n'
+    name = gets.chomp
+    puts 'Enter age: \n'
+    age = gets.chomp
+    puts 'Enter classroom: \n'
+    classroom = gets.chomp
+
+    student = Student.new(name, age, parent_permission: true, classroom)
+    person.push(student)
+    puts 'You successfully added a student!\n'
+  end
+
+  def create_teacher(person)
+    puts 'Enter name: \n'
+    name = gets.chomp
+    puts 'Enter age: \n'
+    age = gets.chomp
+    puts 'Enter specialization: \n'
+    specialization = gets.chomp
+
+    teacher = Teacher.new(name, age, parent_permission: true, specialization)
+    person.push(teacher)
+    puts 'You successfully added a teacher!\n'
   end
 
 app = App.new
