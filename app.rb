@@ -77,6 +77,28 @@ class App
     puts 'You successfully added a teacher!\n'
   end
 
+  def add_rentals(persons, books, rentals)
+    if persons.empty?
+      puts 'Oops, no person to rent.\n'
+    elsif  books.empty?
+      puts 'Oops, no book for rent.\n'
+    else
+      puts 'Choose a person: \n'
+      persons.each{|index, person| puts '#{person.id} - #{person.id} #{person.age}'}
+      puts 'Person index: '
+      person_index = gets.chomp.to_i
+
+      puts 'Choose a book: \n'
+      books.each{|index, book| puts '#{book.id} - #{book.title} #{person.author}'}
+      puts 'Person index: '
+      book_index = gets.chomp.to_i
+    end
+
+    rental = Rental.new(persons[person_index], books[book_index])
+    rentals.push(rental)
+    puts 'You successfully added a teacher!\n'
+  end
+
 app = App.new
 app.list_books
 app.list_persons
