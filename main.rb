@@ -23,15 +23,6 @@ class Main
     choice = gets.chomp
   end
 
-  def person_choice
-    puts '
-    1 > Add a student
-    2 > Add a teacher
-    '
-    puts 'Please kindly choose a number: \n'
-    person_choice = gets.chomp
-  end
-
   def display(choice)
     case choice
     when '1'
@@ -53,17 +44,6 @@ class Main
     when '6'
       list_rentals(@person_list, @rental_list)
       choice
-    end
-  end
-
-  def display_persons(person_choice)
-    case person_choice
-    when '1'
-      add_students()
-      person_choice
-    when '2'
-      add_teachers()
-      person_choice
     end
   end
 end
