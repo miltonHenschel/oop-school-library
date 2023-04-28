@@ -51,9 +51,10 @@ An Object Oriented Programming (OOP) school library with three classes: Person, 
 
 ### Key Features <a name="key-features"></a>
 
-- **Class Person (id, name, and age, parent_permission, of_age(), can_use_services())**
-- **Class Student (classroom, play_hooky()) inherits class Person**
-- **Class Teacher (specialization, can_use_services()) inherits class Person**
+- **Add student, teacher and teacher classes**
+- **Use the "Decorator" design pattern**
+- **Set up associations**
+- **Add basic UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,9 +108,7 @@ Clone this repository to your desired folder:
 To run the project, open your project in your terminal and type:
 
 ```sh
-  ruby person.rb
-  ruby student.rb
-  ruby teacher.rb
+  ruby test.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
