@@ -16,11 +16,17 @@ class App
     end
   end
 
-  def list_persons
-    if @person_list.length == 0
-      puts 'Empty!\n'
+  def list_persons(person)
+    if persons.empty?
+      puts 'Oops, you have no person added yet!\n'
     else
-      @person_list.each{|index, content| puts '#{index} - #{content}'}
+      persons.each do |person|
+        puts 'No.: #{person.id}\n'
+        puts 'Name: #{person.name}\n'
+        puts 'Age: #{person.age}\n'
+        puts 'Parent permission?: #{person.parent_permission}\n'
+        puts '-------------------------\n'
+      end
     end
   end
 
