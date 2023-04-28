@@ -4,11 +4,15 @@ class App
     @person_list = []
   end
 
-  def list_books
-    if @book_list.length == 0
-      puts 'Empty!\n'
+  def list_books(books)
+    if books.empty?
+      puts 'Oops, you have no book yet!\n'
     else
-      @book_list.each{|index, content| puts '#{index} - #{content}'}
+      books.each do |book|
+        puts 'Title: #{book.title}\n'
+        puts 'Author: #{book.author}\n'
+        puts '-------------------------\n'
+      end
     end
   end
 
