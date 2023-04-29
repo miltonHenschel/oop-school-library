@@ -26,7 +26,7 @@ def main
   puts 'Welcome to the School Library!'
   menu
   app = App.new
-  while choice = gets.to_i
+  while (choice = gets.to_i)
     if choice == 7
       puts 'Hope you enjoyed using this app. Good bye!'
       exit
@@ -34,12 +34,11 @@ def main
     method_name = ACTIONS[choice]
     if method_name.nil?
       puts 'Incorrect! Must be between 1-7. Please try again...'
-      menu
     else
       method_tocall = app.method(method_name)
       method_tocall.call
-      menu
     end
+    menu
   end
 end
 
