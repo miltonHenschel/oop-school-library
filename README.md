@@ -18,7 +18,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -55,12 +54,6 @@ An Object Oriented Programming (OOP) school library with three classes: Person, 
 - **Use the "Decorator" design pattern**
 - **Set up associations**
 - **Add basic UI**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- N/A
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,7 +101,7 @@ Clone this repository to your desired folder:
 To run the project, open your project in your terminal and type:
 
 ```sh
-  ruby test.rb
+  ruby main.rb
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
