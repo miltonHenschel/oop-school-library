@@ -1,6 +1,5 @@
 require './app'
 
-
 def menu
   puts '
   1 > List all books
@@ -16,7 +15,7 @@ end
 
 def main
   puts 'Welcome to the School Library!'
-  choice = ''
+  choice = 0
   app = App.new
   menu
   while choice = gets.to_i

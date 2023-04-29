@@ -28,10 +28,11 @@ class App
     else
       @persons.each do |person|
         if person.is_a? Student
-          puts "[Student] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}, Classroom: #{person.classroom}"
+          print "[Student] Name: #{person.name}, ID: #{person.id} "
+          print "Age: #{person.age}, Classroom: #{person.classroom}\n"
         elsif person.is_a? Teacher
-          puts "[Teacher] Name: #{person.name}, ID: #{person.id}"
-          puts "Age: #{person.age}, Specialization: #{person.specialization}"
+          print "[Teacher] Name: #{person.name}, ID: #{person.id} "
+          print "Age: #{person.age}, Specialization: #{person.specialization}\n"
         end
       end
     end
@@ -43,13 +44,13 @@ class App
     else
       @rentals.each do |rental|
         if rental.person.is_a? Student
-          puts "[Rental] Date: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}"
-          puts "[Student] Name: #{rental.person.name}, ID: #{rental.person.id}"
-          puts "Age: #{rental.person.age}, Classroom: #{rental.person.classroom}"
+          print "[Rental] Date: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author} "
+          print "[Student] Name: #{rental.person.name}, ID: #{rental.person.id} "
+          print "Age: #{rental.person.age}, Classroom: #{rental.person.classroom}\n"
         elsif rental.person.is_a? Teacher
-          puts "[Rental] Date: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author}"
-          puts "[Teacher] Name: #{rental.person.name}, ID: #{rental.person.id}"
-          puts "Age: #{rental.person.age}, Specialization: #{rental.person.specialization}"
+          print "[Rental] Date: #{rental.date}, Title: #{rental.book.title}, Author: #{rental.book.author} "
+          print "[Teacher] Name: #{rental.person.name}, ID: #{rental.person.id} "
+          print "Age: #{rental.person.age}, Specialization: #{rental.person.specialization}\n"
         end
       end
     end
@@ -67,6 +68,7 @@ class App
   end
 
   def add_students
+    id = Random.rand(1..1000)
     puts 'Enter name: '
     name = gets.chomp
     puts 'Enter age: '
@@ -74,12 +76,13 @@ class App
     puts 'Enter classroom: '
     classroom = gets.chomp
 
-    student = Student.new(id = Random.rand(1..1000), age, classroom, name, parent_permission: true)
+    student = Student.new(id, age, classroom, name, parent_permission: true)
     @persons.push(student)
     puts 'You successfully added a student!'
   end
 
   def add_teachers
+    id = Random.rand(1..1000)
     puts 'Enter name: '
     name = gets.chomp
     puts 'Enter age: '
@@ -87,7 +90,7 @@ class App
     puts 'Enter specialization: '
     specialization = gets.chomp
 
-    teacher = Teacher.new(id = Random.rand(1..1000), age, specialization, name, parent_permission: true)
+    teacher = Teacher.new(id, age, specialization, name, parent_permission: true)
     @persons.push(teacher)
     puts 'You successfully added a teacher!'
   end
@@ -111,11 +114,11 @@ class App
     puts 'Enter the ID of the person who wants to rent the book: '
     @persons.each_with_index do |person, index|
       if person.is_a? Student
-        puts "#{index} - [Student] Name: #{person.name}, ID: #{person.id}"
-        puts "Age: #{person.age}, Classroom: #{person.classroom}"
+        print "#{index} - [Student] Name: #{person.name}, ID: #{person.id} "
+        print "Age: #{person.age}, Classroom: #{person.classroom}\n"
       elsif person.is_a? Teacher
-        puts "#{index} - [Teacher] Name: #{person.name}, ID: #{person.id}"
-        puts "Age: #{person.age}, Specialization: #{person.specialization}"
+        print "#{index} - [Teacher] Name: #{person.name}, ID: #{person.id} "
+        print "Age: #{person.age}, Specialization: #{person.specialization}\n"
       end
     end
     person_index = gets.chomp.to_i
