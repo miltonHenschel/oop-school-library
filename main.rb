@@ -13,11 +13,8 @@ def menu
   puts 'Please kindly choose a number: '
 end
 
-def main
-  puts 'Welcome to the School Library!'
-  choice = 0
+def handle_menu
   app = App.new
-  menu
   while choice = gets.to_i
     case choice
     when 1
@@ -43,6 +40,12 @@ def main
       exit
     end
   end
+end
+
+def main
+  puts 'Welcome to the School Library!'
+  menu
+  handle_menu
 end
 
 main
