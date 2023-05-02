@@ -34,7 +34,7 @@
 
 # 📖 OOP School Library <a name="about-project"></a>
 
-An Object Oriented Programming (OOP) school library with three classes: Person, Student and Teacher to manage a school.
+An Object Oriented Programming (OOP) school library tool built with Ruby to add new teachers or students, to add or record what books are in the library and save records of who borrows them.
 
 ## 🛠 Built With <a name="built-with"></a>
 
